@@ -1,5 +1,4 @@
 # Login Window Using Tkinter
-from unittest import result
 
 success = False
 from tkinter import *
@@ -7,6 +6,8 @@ import pandas as pd
 import json
 import time # Beginner Friendly | You can use after() function too!
 import threading
+import datetime
+
 # Basic Setup
 window = Tk()
 window.geometry("500x500")
@@ -243,7 +244,7 @@ def add_new_entry():
     if len(password) < 7:
         show_text("Password length must be more than 6 characters.")
         return
-    import datetime
+
     new_user = {
         "userId": username,
         "password": password,
@@ -256,17 +257,17 @@ def add_new_entry():
     with open("Data.json", "w") as Q:
         json.dump(new_data, Q, indent=4)
     show_text("Successfully Registered! Please login again to continue!",color="green",pause=8)
-    signIncmd()
+    signincmd()
 
 
 
 
 mail_label = Label(loginFrame, text="Mail :", fg="white", bg="black", font=("cooper black", 15))
-def signIncmd():
+def signincmd():
     global mail_label,mail_entry
     loginLabel.configure(text="Login")
     signin.configure(text="Sign In",command=check)
-    signUpButton.configure(text="Sign Up",command=signUp)
+    signUpButton.configure(text="Sign Up",command=signup)
     mail_label.grid_forget()
     mail_entry.grid_forget()
 
@@ -280,14 +281,14 @@ def signIncmd():
 
 
 
-def signUp():
+def signup():
     global mail_label, mail_entry
     # loginFrame.configure(height=420)
     loginLabel.configure(text="Sign Up")
     username_entry.grid_configure(pady=15)
     username_label.grid_configure(pady=15)
     signin.configure(text="Sign Up",command=add_new_entry)
-    signUpButton.configure(text="Sign In",command=signIncmd)
+    signUpButton.configure(text="Sign In",command=signincmd)
     pass_entry.configure(show="")
 
 
@@ -304,7 +305,7 @@ def signUp():
 signin = Button(loginFrame,text="Sign In",fg ="white",bg ="black",font=("none",15),relief="sunken",borderwidth=4,command=check)
 signin.grid(row=4,columnspan=2,pady=20)
 
-signUpButton = Button(loginFrame,text="Sign Up",command=signUp,fg="blue",bg="black",borderwidth=0,highlightcolor="red")
+signUpButton = Button(loginFrame,text="Sign Up",command=signup,fg="blue",bg="black",borderwidth=0,highlightcolor="red")
 signUpButton.grid(row=5,columnspan=2,pady=10)
 window.mainloop()
 
