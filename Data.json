@@ -1,0 +1,22 @@
+{
+    "users": [
+        {
+            "userId": "admin",
+            "password": "admin123",
+            "createdAt": "2016-05-15 08:30:57",
+            "mail": "admin@gmail.com"
+        },
+        {
+            "userId": "manager",
+            "password": "manager123",
+            "createdAt": "2015-11-20 11:45:16",
+            "mail": "manager@gmail.com"
+        },
+        {
+            "userId": "abcdefgh",
+            "password": "abcdef1",
+            "createdAt": "2026-05-25 14:27:47",
+            "mail": "pankajkbc@gmail.com"
+        }
+    ]
+}
