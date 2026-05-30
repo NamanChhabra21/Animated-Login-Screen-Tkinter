@@ -1,5 +1,7 @@
 # Animated Login System Using `tkinter`
 ---
+<img src="https://raw.githubusercontent.com/NamanChhabra21/Animated-Login-Screen-Tkinter/main/Screenshots/GIF.gif" width="350">
+
 ## Features
 - SignIn System
 - SignUp System
